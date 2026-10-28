@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://github.com/SU_USUARIO_GITHUB/gitops-lab
+  url: https://github.com/dubercode/gitops-flux-fleet
   ref:
     branch: main
 ---

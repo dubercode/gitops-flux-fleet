@@ -1,0 +1,14 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: apps-dev
+  namespace: flux-system
+spec:
+  interval: 1m
+  retryInterval: 10s
+  sourceRef:
+    kind: GitRepository
+    name: gitops-lab
+  path: ./apps/base   # <--- Aquí le indicas la ruta exacta de tus manifiestos en el repo
+  prune: true         # <--- Habilita que si borras algo en Git, se borre en el clúster
+  targetNamespace: demo-app
