@@ -13,11 +13,11 @@ permissions:
 
 jobs:
   validate:
-    name: Validate Kustomize manifests
+    name: Validate Kustomize
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Kustomize
@@ -26,5 +26,5 @@ jobs:
       - name: Validate local cluster
         run: kustomize build clusters/local
 
-      - name: Validate demo application
+      - name: Validate application
         run: kustomize build apps/catalog/demo-app/overlays/dev
