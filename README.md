@@ -8,11 +8,15 @@ GitHub is the source of truth for Kubernetes desired state.
 
 ## Responsibilities
 
-- Terraform: cloud infrastructure provisioning.
+## Responsibilities
+
+- GitHub: source of truth for Kubernetes desired state.
 - Flux source-controller: retrieves Git sources.
 - Flux kustomize-controller: reconciles Kubernetes manifests.
 - Flux helm-controller: manages Helm releases.
-- GitHub Actions: validates changes before merge.
+- GitHub Actions: validates manifests before deployment.
+- Minikube: local Kubernetes environment.
+- Kustomize: manages reusable application manifests.
 
 ## Reconciliation Flow
 
