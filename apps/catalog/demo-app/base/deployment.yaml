@@ -27,7 +27,7 @@ spec:
 
       containers:
         - name: web-app
-          image: nginx:1.27-alpine
+          image: nginxinc/nginx-unprivileged
           imagePullPolicy: IfNotPresent
 
           ports:
