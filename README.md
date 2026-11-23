@@ -2,6 +2,12 @@ Archivo de documentacion principal Estrategia GitOps
 
 # GitOps Fleet Platform Architecture
 
+## Documentation
+
+The detailed technical documentation is available here:
+
+- [GitOps Platform Foundation](docs/platform-foundation.md)
+
 ## Source of Truth
 
 GitHub is the source of truth for Kubernetes desired state.
