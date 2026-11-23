@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/name: demo-app
     app.kubernetes.io/component: frontend
 spec:
-  replicas: 1
+  replicas: 2
 
   selector:
     matchLabels:

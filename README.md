@@ -8,8 +8,6 @@ GitHub is the source of truth for Kubernetes desired state.
 
 ## Responsibilities
 
-## Responsibilities
-
 - GitHub: source of truth for Kubernetes desired state.
 - Flux source-controller: retrieves Git sources.
 - Flux kustomize-controller: reconciles Kubernetes manifests.
