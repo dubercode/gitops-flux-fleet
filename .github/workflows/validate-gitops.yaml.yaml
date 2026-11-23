@@ -1,0 +1,30 @@
+name: Validate GitOps Manifests
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - feat/gitops-platform-foundation
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate Kustomize manifests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Kustomize
+        uses: imranismail/setup-kustomize@v2
+
+      - name: Validate local cluster
+        run: kustomize build clusters/local
+
+      - name: Validate demo application
+        run: kustomize build apps/catalog/demo-app/overlays/dev
